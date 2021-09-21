@@ -1,6 +1,6 @@
 #!/usr/bin/env bashio
 
-INTERVAL$(bashio::config 'interval')
+INTERVAL=$(bashio::config 'interval')
 
 bashio::log.info '======================================'
 bashio::log.info '====      Start Flare DNS         ===='
