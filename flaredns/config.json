@@ -7,7 +7,9 @@
     "startup": "application",
     "boot": "auto",
     "options": {
-        "zones": [],
+        "zones": [
+            { "name": "example.com", "domains": ["subdomain.example.com"]}
+        ],
         "token": null,
         "ip_lookup_service": "https://api.ipify.org",
         "interval": 900
