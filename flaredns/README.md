@@ -10,6 +10,7 @@ Flare DNS is a Home Assistant Addon for easy dyndns integration based on cloudfl
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 
-## Credits
+## Authors & contributors
 
-Special credits go to [Marcel Stüttgen](https://github.com/mstuettgen) for developing the initial python script.
+The original setup of this repository is by [Thomas Joußen](https://github.com/thojou).
+Special credits go to [Marcel Stüttgen](https://github.com/mstuettgen) for contributing the original python script.

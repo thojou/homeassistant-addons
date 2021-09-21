@@ -57,7 +57,3 @@ An url which will be used to perform the public ip (external ip) lookup
 ### Option `interval`
 
 Define the interval in seconds for reapeating the public ip update step
-
-## Credits
-
-Special credits go to [Marcel Stüttgen](https://github.com/mstuettgen) for developing the initial python script.
