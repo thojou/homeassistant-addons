@@ -20,5 +20,5 @@
         "ip_lookup_service": "url",
         "interval": "int"
     },
-    "image": "thojou/{arch}-addon-flaredns"
+    "image": "https://ghcr.io/thojou/homeassistant-addons/{arch}-addon-flaredns"
 }
