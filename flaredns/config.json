@@ -1,0 +1,23 @@
+{
+    "name": "FlareDNS",
+    "version": "1.0.0",
+    "slug": "flare_dns",
+    "description": "Cloudflare DynDNS implementation for Home Assistant",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "application",
+    "boot": "auto",
+    "options": {
+        "zones": [],
+        "token": null,
+        "ip_lookup_service": "https://api.ipify.org",
+        "interval": 900
+    },
+    "schema": {
+        "zones": [
+            { "name": "str", "domains": ["str"]}
+        ],
+        "token": "str",
+        "ip_lookup_service": "url",
+        "interval": "int"
+    }
+}
