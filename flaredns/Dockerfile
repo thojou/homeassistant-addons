@@ -1,6 +1,5 @@
-#ARG BUILD_FROM
-#FROM ${BUILD_FROM}
-FROM homeassistant/armv7-base-python:latest
+ARG BUILD_FROM
+FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 

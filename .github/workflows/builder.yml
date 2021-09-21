@@ -116,6 +116,4 @@ jobs:
             ${{ env.BUILD_ARGS }} \
             --${{ matrix.arch }} \
             --target /data/${{ matrix.addon }} \
-            --with-codenotary "${{ secrets.VCN_USER }}" "${{ secrets.VCN_PASSWORD }}" "${{ secrets.VCN_ORG }}" \
-            --validate-from "${{ secrets.VCN_ORG }}" \
             --addon
