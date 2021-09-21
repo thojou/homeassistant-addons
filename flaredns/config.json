@@ -19,5 +19,6 @@
         "token": "str",
         "ip_lookup_service": "url",
         "interval": "int"
-    }
+    },
+    "image": "thojou/{arch}-addon-flaredns"
 }
