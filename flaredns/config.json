@@ -1,6 +1,6 @@
 {
     "name": "FlareDNS",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "slug": "flare_dns",
     "description": "Cloudflare DynDNS implementation for Home Assistant",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -20,5 +20,5 @@
         "ip_lookup_service": "url",
         "interval": "int"
     },
-    "image": "https://ghcr.io/thojou/homeassistant-addons/{arch}-addon-flaredns"
+    "image": "thojou/{arch}-addon-flaredns"
 }
