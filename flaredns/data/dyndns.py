@@ -48,9 +48,8 @@ def get_dns_records(cf, zone_id):
 
     return dns_records
 
-def update_dns_records(cf, public_ip, dns_records, whitelist): 
+def update_dns_records(cf, public_ip, dns_records, whitelist, zone_id): 
     for record in dns_records:
-        r_name = record['name']
         if record['name'] not in whitelist:
             print("Missing dns record %s in whitelist. Ignore record" % record['name'])
             continue
@@ -60,7 +59,7 @@ def update_dns_records(cf, public_ip, dns_records, whitelist):
 
         try:
             print('Update %s: %s => %s' % (record['name'], record['content'], public_ip))
-            dns_record = cf.zones.dns_records.patch(zone_id, record['id'], data={'content': public_ip})
+            cf.zones.dns_records.patch(zone_id, record['id'], data={'content': public_ip})
             print('UPDATED %s: %s -> %s'% (record['name'], record['content'], public_ip))
         except CloudFlare.exceptions.CloudFlareAPIError as e:
             print('/zones.dns_records.patch %s - %d %s - api call failed' % (record['name'], e, e))
@@ -74,7 +73,7 @@ def main():
     for zone in options['zones']:
         zone_id   = get_zone_id(cf, zone['name'])
         dns_records = get_dns_records(cf, zone_id);
-        update_dns_records(cf, public_ip, dns_records, zone['domains'])
+        update_dns_records(cf, public_ip, dns_records, zone['domains'], zone_id)
 
 if __name__ == '__main__':
     main()
